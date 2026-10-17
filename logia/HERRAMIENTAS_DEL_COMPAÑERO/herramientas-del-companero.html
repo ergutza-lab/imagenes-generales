@@ -36,9 +36,7 @@ html,body{margin:0;padding:0;background:var(--bg);}
 /* ── LAYOUTS ── */
 .lr{width:100vw;height:100vh;display:flex;flex-direction:row;overflow:hidden;background:var(--bg);position:relative;}
 .lr .content{flex:0 0 52%;display:flex;flex-direction:column;justify-content:center;
-  padding:36px 40px 36px 60px;position:relative;z-index:2;overflow:hidden;}
-/* Imagen a sangre completa con difuminado hacia el fondo crema (izquierda) */
-/* Panel cuadrado a la derecha: alto completo, ancho = alto (máx. 62% de la pantalla) */
+  padding:34px 38px 34px 58px;position:relative;z-index:2;overflow:hidden;}
 .lr .imgpanel{position:absolute;top:0;right:0;bottom:0;width:min(100vh,62vw);z-index:0;overflow:hidden;
   -webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.55) 14%,#000 34%);
           mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.55) 14%,#000 34%);}
@@ -46,8 +44,7 @@ html,body{margin:0;padding:0;background:var(--bg);}
 
 .tb{width:100vw;height:100vh;display:flex;flex-direction:column;overflow:hidden;background:var(--bg);position:relative;}
 .tb .content{flex:0 0 54%;display:flex;flex-direction:column;justify-content:center;align-items:center;
-  padding:26px 56px 12px;text-align:center;position:relative;z-index:2;overflow:hidden;}
-/* Imagen a sangre completa con difuminado hacia el fondo crema (arriba) */
+  padding:24px 54px 12px;text-align:center;position:relative;z-index:2;overflow:hidden;}
 .tb .gold-divider{display:none;}
 .tb .imgpanel{position:absolute;left:0;right:0;bottom:0;height:46%;z-index:0;overflow:hidden;
   -webkit-mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.55) 18%,#000 40%);
@@ -64,7 +61,7 @@ html,body{margin:0;padding:0;background:var(--bg);}
 
 /* ── FLOATING NUMERAL ── */
 @keyframes fl{0%,100%{transform:translateY(0) rotate(-3deg);opacity:.08;}50%{transform:translateY(-12px) rotate(-1deg);opacity:.14;}}
-.num{position:absolute;right:28px;bottom:20px;z-index:5;font-family:var(--FC);font-size:4.5rem;color:var(--gold);
+.num{position:absolute;right:28px;bottom:20px;z-index:5;font-family:var(--FC);font-size:5.5rem;color:var(--gold);
   line-height:1;pointer-events:none;animation:fl 5s ease-in-out infinite;transform-origin:bottom right;}
 
 /* ── SIGNATURE / EYEBROW ── */
@@ -72,21 +69,21 @@ html,body{margin:0;padding:0;background:var(--bg);}
   transition:width 1.1s cubic-bezier(.4,0,.2,1) .3s;}
 .reveal .present .sig{width:60px;}
 .sig.c{margin-left:auto;margin-right:auto;}
-.eye{display:block;font-family:var(--FC);font-size:.74rem;letter-spacing:.32em;color:var(--gold);
-  text-transform:uppercase;margin-bottom:9px;opacity:0;transform:translateY(6px);
+.eye{display:block;font-family:var(--FC);font-size:clamp(.78rem,min(1.1vw,1.9vh),.95rem);letter-spacing:.32em;color:var(--gold);
+  text-transform:uppercase;margin-bottom:10px;opacity:0;transform:translateY(6px);
   transition:opacity .7s ease .2s,transform .7s ease .2s;}
 .reveal .present .eye{opacity:1;transform:translateY(0);}
 
 /* ── TYPE ── */
-.t-hero{font-family:var(--FC);font-size:clamp(1.9rem,min(4.3vw,7vh),3.4rem);font-weight:700;color:var(--ink);line-height:1.15;margin-bottom:12px;}
-.t-h2{font-family:var(--FC);font-size:clamp(1.4rem,min(3vw,5vh),2.3rem);font-weight:600;color:var(--ink);line-height:1.2;margin-bottom:8px;}
-.t-sub{font-family:var(--FC);font-size:clamp(.72rem,min(1.2vw,2vh),.95rem);color:var(--mut);letter-spacing:.18em;text-transform:uppercase;display:block;margin-bottom:10px;}
-.t-lg{font-family:var(--FB);font-size:clamp(1.05rem,min(1.9vw,3.2vh),1.5rem);color:var(--ink);line-height:1.65;}
-.b{font-family:var(--FB);font-size:clamp(.88rem,min(1.5vw,2.6vh),1.22rem);color:var(--ink);line-height:1.55;margin-bottom:1.3vh;}
+.t-hero{font-family:var(--FC);font-size:clamp(2rem,min(5vw,8vh),3.8rem);font-weight:700;color:var(--ink);line-height:1.12;margin-bottom:12px;}
+.t-h2{font-family:var(--FC);font-size:clamp(1.6rem,min(3.6vw,6vh),2.7rem);font-weight:600;color:var(--ink);line-height:1.18;margin-bottom:10px;}
+.t-sub{font-family:var(--FC);font-size:clamp(.82rem,min(1.4vw,2.4vh),1.05rem);color:var(--mut);letter-spacing:.18em;text-transform:uppercase;display:block;margin-bottom:12px;}
+.t-lg{font-family:var(--FB);font-size:clamp(1.15rem,min(2.2vw,3.7vh),1.8rem);color:var(--ink);line-height:1.6;}
+.b{font-family:var(--FB);font-size:clamp(1rem,min(1.9vw,3.3vh),1.6rem);color:var(--ink);line-height:1.55;margin-bottom:1.4vh;}
 .b.mut{color:var(--mut);}
 .b.it{font-style:italic;}
 em{color:var(--gold) !important;font-style:italic;}
-.ponente{font-family:var(--FC);font-size:.7rem;letter-spacing:.2em;color:var(--mut);text-transform:uppercase;margin-top:18px;display:block;}
+.ponente{font-family:var(--FC);font-size:clamp(.72rem,min(1.1vw,1.8vh),.85rem);letter-spacing:.2em;color:var(--mut);text-transform:uppercase;margin-top:18px;display:block;}
 .rule{display:block;width:44px;height:2px;background:var(--gold);margin:12px 0;}
 .rule.c{margin:12px auto;}
 
@@ -98,62 +95,62 @@ em{color:var(--gold) !important;font-style:italic;}
 .d7{transition-delay:1.05s}.d8{transition-delay:1.2s}
 
 /* ── LISTA CON ROMBO ── */
-.ls{display:flex;flex-direction:column;gap:1.1vh;margin:1vh 0 1.6vh;width:100%;}
-.li{display:flex;align-items:flex-start;gap:12px;opacity:0;transform:translateX(-12px);
+.ls{display:flex;flex-direction:column;gap:1.3vh;margin:1.2vh 0 1.7vh;width:100%;}
+.li{display:flex;align-items:flex-start;gap:14px;opacity:0;transform:translateX(-12px);
   transition:opacity .6s ease,transform .6s ease;}
 .reveal .present .li{opacity:1;transform:translateX(0);}
 .li:nth-child(1){transition-delay:.3s}.li:nth-child(2){transition-delay:.5s}.li:nth-child(3){transition-delay:.7s}
 .li:nth-child(4){transition-delay:.9s}.li:nth-child(5){transition-delay:1.1s}
-.gm{flex-shrink:0;width:8px;height:8px;background:var(--gold);transform:rotate(45deg);margin-top:.62em;}
-.lt{font-family:var(--FB);font-size:clamp(.88rem,min(1.5vw,2.6vh),1.2rem);color:var(--ink);line-height:1.5;}
+.gm{flex-shrink:0;width:9px;height:9px;background:var(--gold);transform:rotate(45deg);margin-top:.62em;}
+.lt{font-family:var(--FB);font-size:clamp(1rem,min(1.9vw,3.3vh),1.55rem);color:var(--ink);line-height:1.5;}
 .lt strong{font-family:var(--FC);font-weight:700;color:var(--gold);letter-spacing:.03em;}
 
 /* ── BLOQUES DE GRADO ── */
-.gr{border-left:3px solid var(--gold);background:var(--dim);padding:1.3vh 16px;margin-bottom:1.2vh;
+.gr{border-left:3px solid var(--gold);background:var(--dim);padding:1.5vh 18px;margin-bottom:1.3vh;
   opacity:0;transform:translateX(-12px);transition:opacity .65s ease,transform .65s ease;}
 .reveal .present .gr{opacity:1;transform:translateX(0);}
 .gr.g1{transition-delay:.35s}.gr.g2{transition-delay:.6s}
-.gr-l{font-family:var(--FC);font-size:clamp(.6rem,min(1vw,1.7vh),.78rem);letter-spacing:.22em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:.6vh;}
+.gr-l{font-family:var(--FC);font-size:clamp(.68rem,min(1.1vw,1.9vh),.88rem);letter-spacing:.22em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:.7vh;}
 .gr .b{margin-bottom:0;}
 
 /* ── PREGUNTA ── */
-.qbox{border:2px solid rgba(140,96,32,.3);background:var(--dim);padding:1.4vh 18px;margin-top:.8vh;
+.qbox{border:2px solid rgba(140,96,32,.3);background:var(--dim);padding:1.5vh 20px;margin-top:1vh;
   opacity:0;transition:opacity 1s ease 1s;}
 .reveal .present .qbox{opacity:1;}
-.qbox .ql{font-family:var(--FC);font-size:clamp(.6rem,min(1vw,1.7vh),.76rem);letter-spacing:.24em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:.6vh;}
-.qbox .qt{font-family:var(--FB);font-style:italic;font-size:clamp(.92rem,min(1.6vw,2.8vh),1.3rem);color:var(--ink);line-height:1.5;display:block;}
+.qbox .ql{font-family:var(--FC);font-size:clamp(.68rem,min(1.1vw,1.9vh),.86rem);letter-spacing:.24em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:.7vh;}
+.qbox .qt{font-family:var(--FB);font-style:italic;font-size:clamp(1.05rem,min(1.9vw,3.3vh),1.6rem);color:var(--ink);line-height:1.5;display:block;}
 
 /* ── CIERRE (frase final) ── */
-.fin{font-family:var(--FC);font-weight:600;font-size:clamp(.9rem,min(1.55vw,2.7vh),1.25rem);color:var(--gold);
-  line-height:1.5;margin-top:1.2vh;opacity:0;transition:opacity 1s ease 1.4s;}
+.fin{font-family:var(--FC);font-weight:600;font-size:clamp(1.05rem,min(1.9vw,3.2vh),1.55rem);color:var(--gold);
+  line-height:1.5;margin-top:1.3vh;opacity:0;transition:opacity 1s ease 1.4s;}
 .reveal .present .fin{opacity:1;}
 
 /* ── DOS COLUMNAS (escuadra / palanca) ── */
-.two{display:grid;grid-template-columns:1fr 2px 1fr;width:100%;margin:.6vh 0 1.2vh;}
+.two{display:grid;grid-template-columns:1fr 2px 1fr;width:100%;margin:.8vh 0 1.3vh;}
 .vdiv{background:linear-gradient(to bottom,transparent,var(--gold) 20%,var(--gold) 80%,transparent);align-self:stretch;}
 .cl2{padding:0 16px;}
 .cl2:first-child{padding-left:0;}
-.cl2-t{font-family:var(--FC);font-size:clamp(1.05rem,min(1.9vw,3.2vh),1.5rem);font-weight:700;color:var(--ink);display:block;margin-bottom:.6vh;}
-.cl2-r{display:block;width:32px;height:2px;background:var(--gold);margin-bottom:1vh;}
-.cl2 .b{margin-bottom:1vh;}
-.cl2 .b strong{font-family:var(--FC);font-size:.78em;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:.2vh;}
+.cl2-t{font-family:var(--FC);font-size:clamp(1.2rem,min(2.2vw,3.7vh),1.75rem);font-weight:700;color:var(--ink);display:block;margin-bottom:.7vh;}
+.cl2-r{display:block;width:32px;height:2px;background:var(--gold);margin-bottom:1.1vh;}
+.cl2 .b{margin-bottom:1.1vh;}
+.cl2 .b strong{font-family:var(--FC);font-size:.78em;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:.25vh;}
 .fx{opacity:0;transform:translateX(-13px);transition:opacity .7s ease .4s,transform .7s ease .4s;}
 .fxr{opacity:0;transform:translateX(13px);transition:opacity .7s ease .5s,transform .7s ease .5s;}
 .reveal .present .fx,.reveal .present .fxr{opacity:1;transform:translateX(0);}
 
 /* ── TARJETAS DE 4 DIMENSIONES ── */
-.c4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;width:100%;margin:1vh 0;}
-.cd{background:var(--dim);border-top:3px solid var(--gold);padding:1.4vh 12px;text-align:center;
+.c4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;width:100%;margin:1.2vh 0;}
+.cd{background:var(--dim);border-top:3px solid var(--gold);padding:1.6vh 14px;text-align:center;
   opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease;}
 .reveal .present .cd{opacity:1;transform:translateY(0);}
 .cd:nth-child(1){transition-delay:.3s}.cd:nth-child(2){transition-delay:.55s}
 .cd:nth-child(3){transition-delay:.8s}.cd:nth-child(4){transition-delay:1.05s}
-.cd-n{font-family:var(--FC);font-size:.6rem;letter-spacing:.2em;color:var(--gold);display:block;margin-bottom:.5vh;}
-.cd-h{font-family:var(--FC);font-size:clamp(.95rem,min(1.7vw,2.9vh),1.35rem);font-weight:700;color:var(--ink);display:block;margin-bottom:.8vh;letter-spacing:.06em;}
-.cd-b{font-family:var(--FB);font-size:clamp(.82rem,min(1.3vw,2.3vh),1.05rem);color:var(--ink);line-height:1.45;display:block;}
+.cd-n{font-family:var(--FC);font-size:.72rem;letter-spacing:.2em;color:var(--gold);display:block;margin-bottom:.6vh;}
+.cd-h{font-family:var(--FC);font-size:clamp(1.1rem,min(2vw,3.4vh),1.6rem);font-weight:700;color:var(--ink);display:block;margin-bottom:.9vh;letter-spacing:.06em;}
+.cd-b{font-family:var(--FB);font-size:clamp(.95rem,min(1.6vw,2.8vh),1.3rem);color:var(--ink);line-height:1.45;display:block;}
 
 /* ── CONCLUSIÓN ── */
-.gem{width:11px;height:11px;background:var(--gold);transform:rotate(45deg);display:inline-block;margin:1.2vh 0;}
+.gem{width:12px;height:12px;background:var(--gold);transform:rotate(45deg);display:inline-block;margin:1.3vh 0;}
 </style>
 </head>
 <body>
@@ -315,7 +312,9 @@ em{color:var(--gold) !important;font-style:italic;}
   <div class="num">VIII</div>
   <div class="content">
     <span class="eye">Cuarta y quinta herramienta</span>
-    <h2 class="t-hero fi d1" style="margin-bottom:4px;font-size:clamp(1.6rem,min(3.6vw,6vh),2.9rem);">La Escuadra y la Palanca</h2>
+    <h2 class="t-hero fi d1" style="margin-bottom:4px;font-size:clamp(1.6rem,min(3.4vw,5.6vh),2.5rem);">
+  La Escuadra y la Palanca
+</h2>
     <span class="t-sub fi d2">Rectitud e inteligencia aplicada</span>
     <div class="two">
       <div class="cl2"><div class="fx">
